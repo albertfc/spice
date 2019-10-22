@@ -1,0 +1,28 @@
+SPICE is the firmware for the modular saturation unit from Plankton
+Electronics (http://www.planktonelectronics.com/). SPICE offers huge variety of
+sounds and colors, from subtle tube warmness to extreme fuzz distortion.
+
+Currently, this firmware implements the digital distortion module and the
+encoder control.
+
+The code is designed to run in a Atmel AVR atmega328p, but easily should run in
+any other AVR device with few modifications.
+
+Compilation and upload
+======================
+$ ./build.sh
+automatically prepares, compiles and uploads the code for supported OS. 
+
+If your system is not supported, you can follow the next steps:
+
+$ ./configure --host=avr
+prepares code to be compiled on your system.
+
+$ make
+compiles everything.
+
+$ make upload
+uploads program to an AVR MCU using 'avrdude'.
+
+$ ./configure --help
+lists available compile time options.

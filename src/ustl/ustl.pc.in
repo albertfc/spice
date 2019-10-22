@@ -1,0 +1,10 @@
+prefix=@prefix@
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: @PKG_NAME@
+Description: A size-optimized STL implementation
+Version: @PKG_MAJOR@.@PKG_MINOR@
+Libs: -L${libdir} -lustl
+Libs.private: -Wl,-gc-sections @libsupc++@ @libgcc_eh@ @libSystemStubs@
+Cflags: -I${includedir}
